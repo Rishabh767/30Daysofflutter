@@ -58,3 +58,4 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
+//Day 7 - Had a QnA session of 30 mins and cleared out all my doubts and queries
