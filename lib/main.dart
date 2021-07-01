@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/home_page.dart';
 import 'package:flutter_application_1/pages/login_page.dart';
+import 'package:flutter_application_1/utils/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
-      initialRoute: "/login", // this route will always launch first
+      debugShowCheckedModeBanner: false,
+      initialRoute: MyRoutes.homeRoute, // this route will always launch first
       routes: {
         "/": (context) => HomePage(),
         "/home": (context) => HomePage(),
