@@ -6,7 +6,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final int days = 30;
     return Container(
         child: Scaffold(
       appBar: AppBar(
