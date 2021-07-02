@@ -6,9 +6,9 @@ class MyTheme {
       primarySwatch: Colors.teal,
       fontFamily: GoogleFonts.lato().fontFamily,
       appBarTheme: AppBarTheme(
-        color: Colors.teal,
+        color: Colors.white,
         elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.teal),
+        iconTheme: IconThemeData(color: Colors.black),
         textTheme: Theme.of(context).textTheme,
       ));
   static ThemeData DarkTheme(BuildContext context) => ThemeData(
