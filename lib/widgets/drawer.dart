@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -53,3 +55,10 @@ class MyDrawer extends StatelessWidget {
     );
   }
 }
+// Day-11  
+// learnt about Flutter trees -
+// 1.Widget-They are Immutable
+// 2.Element-They contain widgets and update themselves by replacing the widgets on any change
+// 3.Render -REnders all the info
+
+// Constraints go down ,sizes go up, parent sets position
