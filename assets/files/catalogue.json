@@ -2,73 +2,63 @@
     "products": [{
             "id": 1,
             "name": "IPhone",
-            "desc": "fheofhsdof",
-            "price": 213,
-            "color": "FSFS",
+            "desc": " Dual-camera system with 12MPcameras",
+            "price": 599,
+            "color": "fxfx",
             "image": "https://cdn.shopify.com/s/files/1/0281/2805/1260/products/IP6SG_6c88e105-6510-41c8-b8d8-3bb93dab4f13_1024x1024.jpg?v=1574499560"
 
         },
         {
             "id": 2,
-            "name": "IPhone",
-            "desc": "fheofhsdof",
-            "price": 213,
+            "name": "MacBook",
+            "desc": "Apple-designed M1 chip for a giant leap in CPU",
+            "price": 1200,
             "color": "FSFS",
-            "image": "https://cdn.shopify.com/s/files/1/0281/2805/1260/products/IP6SG_6c88e105-6510-41c8-b8d8-3bb93dab4f13_1024x1024.jpg?v=1574499560"
+            "image": "https://images-eu.ssl-images-amazon.com/images/I/316ArzLeJ2L._SY445_SX342_QL70_FMwebp_.jpg"
 
         },
         {
             "id": 3,
-            "name": "IPhone",
-            "desc": "fheofhsdof",
-            "price": 213,
+            "name": "AirPods",
+            "desc": "Transparency mode for hearing ",
+            "price": 259,
             "color": "FSFS",
-            "image": "https://cdn.shopify.com/s/files/1/0281/2805/1260/products/IP6SG_6c88e105-6510-41c8-b8d8-3bb93dab4f13_1024x1024.jpg?v=1574499560"
+            "image": "https://images-na.ssl-images-amazon.com/images/I/71zny7BTRlL._SX679_.jpg"
 
         },
         {
             "id": 4,
-            "name": "IPhone",
-            "desc": "fheofhsdof",
-            "price": 213,
+            "name": "I-Pad",
+            "desc": "I Pad Description ",
+            "price": 559,
             "color": "FSFS",
-            "image": "https://cdn.shopify.com/s/files/1/0281/2805/1260/products/IP6SG_6c88e105-6510-41c8-b8d8-3bb93dab4f13_1024x1024.jpg?v=1574499560"
+            "image": "https://images-na.ssl-images-amazon.com/images/I/71YxgZu73mL._SL1500_.jpg"
 
         },
         {
             "id": 5,
-            "name": "IPhone",
-            "desc": "fheofhsdof",
-            "price": 213,
+            "name": "Apple Watch",
+            "desc": "Swimproof,Optical heart sensor",
+            "price": 349,
             "color": "FSFS",
-            "image": "https://cdn.shopify.com/s/files/1/0281/2805/1260/products/IP6SG_6c88e105-6510-41c8-b8d8-3bb93dab4f13_1024x1024.jpg?v=1574499560"
+            "image": "https://images-na.ssl-images-amazon.com/images/I/71WgOCvKwrL._SL1500_.jpg"
 
         },
         {
             "id": 6,
-            "name": "IPhone",
-            "desc": "fheofhsdof",
-            "price": 213,
+            "name": "Apple Pencil",
+            "desc": " Apple Pencil features fluidity of a traditional writing instrument ",
+            "price": 89,
             "color": "FSFS",
-            "image": "https://cdn.shopify.com/s/files/1/0281/2805/1260/products/IP6SG_6c88e105-6510-41c8-b8d8-3bb93dab4f13_1024x1024.jpg?v=1574499560"
-
+            "image": "https://images-na.ssl-images-amazon.com/images/I/21l795GXZkL._SL1024_.jpg"
         },
         {
             "id": 7,
-            "name": "IPhone",
-            "desc": "fheofhsdof",
-            "price": 213,
+            "name": "Apple TV 4K",
+            "desc": " 4k high dynamic range  for stunning picture quality",
+            "price": 189,
             "color": "FSFS",
-            "image": "https://cdn.shopify.com/s/files/1/0281/2805/1260/products/IP6SG_6c88e105-6510-41c8-b8d8-3bb93dab4f13_1024x1024.jpg?v=1574499560"
-
-        },
-        {
-            "id": 8,
-            "name": "IPhone",
-            "desc": "fheofhsdof",
-            "price": 213,
-            "color": "FSFS",
-            "image": "https://cdn.shopify.com/s/files/1/0281/2805/1260/products/IP6SG_6c88e105-6510-41c8-b8d8-3bb93dab4f13_1024x1024.jpg?v=1574499560"
+            "image": "https://images-na.ssl-images-amazon.com/images/I/41LpF5n38kL._SL1024_.jpg"
 
         }
     ]
