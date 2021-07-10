@@ -38,7 +38,7 @@ class CatalogItem extends StatelessWidget {
     return VxBox(
         child: Row(children: [
       Hero(
-          tag: key(catalog.id.toString()),
+          tag: Key(catalog.id.toString()),
           child: CatalogImage(image: catalog.image)),
       Expanded(
           child: Column(
@@ -61,7 +61,7 @@ class CatalogItem extends StatelessWidget {
                     shape: MaterialStateProperty.all(
                       StadiumBorder(),
                     )),
-                child: "Buy".text.make(),
+                child: "Add to Cart".text.make(),
               )
             ],
           ).pOnly(right: 8.0)

@@ -1,7 +1,9 @@
 import 'dart:convert';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application_1/utils/routes.dart';
 import 'package:flutter_application_1/widgets/home_widgets/catalog_header.dart';
 import 'package:flutter_application_1/widgets/home_widgets/catalog_list.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -28,9 +30,9 @@ class _HomePageState extends State<HomePage> {
     await Future.delayed(Duration(seconds: 2));
     var catalogJson =
         await rootBundle.loadString("assets/files/catalogue.json");
-    print(catalogJson);
+    // print(catalogJson);
     var decodedData = jsonDecode(catalogJson);
-    print(decodedData);
+    // print(decodedData);
     var productsData = decodedData["products"];
     CatalogModel.items = List.from(productsData)
         .map<Item>((item) => Item.fromMap(item))
@@ -41,29 +43,27 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
+        backgroundColor: Colors.teal,
+        child: Icon(CupertinoIcons.cart),
+      ),
       resizeToAvoidBottomInset: false,
       backgroundColor: MyTheme.creamColor,
       body: SafeArea(
-        child: ListView(
-          shrinkWrap: true,
-          physics: ClampingScrollPhysics(),
-          children: [
-            Container(
-              padding: Vx.m32,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  CatalogueHeader(),
-                  // ignore: unnecessary_null_comparison
-                  if (CatalogModel.items != null &&
-                      CatalogModel.items.isNotEmpty)
-                    CatalogList().py16().expand()
-                  else
-                    CircularProgressIndicator().centered().expand(),
-                ],
-              ),
-            ),
-          ],
+        child: Container(
+          padding: Vx.m32,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CatalogueHeader(),
+              // ignore: unnecessary_null_comparison
+              if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
+                CatalogList().py16().expand()
+              else
+                CircularProgressIndicator().centered().expand(),
+            ],
+          ),
         ),
       ),
     );
