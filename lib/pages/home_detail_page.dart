@@ -12,10 +12,10 @@ class HomeDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: context.canvasColor,
       ),
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
@@ -25,7 +25,7 @@ class HomeDetailPage extends StatelessWidget {
               onPressed: () {},
               style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all(MyTheme.darkBluish),
+                      MaterialStateProperty.all(context.theme.buttonColor),
                   shape: MaterialStateProperty.all(
                     StadiumBorder(),
                   )),
@@ -49,11 +49,14 @@ class HomeDetailPage extends StatelessWidget {
               arcType: VxArcType.CONVEY,
               edge: VxEdge.TOP,
               child: Container(
-                color: Colors.white,
+                color: context.cardColor,
                 width: context.screenWidth,
                 child: Column(
                   children: [
-                    catalog.name.text.xl4.color(MyTheme.darkBluish).bold.make(),
+                    catalog.name.text.xl4
+                        .color(context.accentColor)
+                        .bold
+                        .make(),
                     catalog.desc.text.xl.textStyle(context.captionStyle).make(),
                     10.heightBox,
                     "Sadipscing dolore clita rebum diam labore voluptua, invidunt takimata dolore elitr voluptua eos, diam lorem dolor voluptua stet rebum sed consetetur consetetur, sed elitr eirmod consetetur clita dolor eirmod. Takimata duo dolore et ipsum. Tempor sanctus rebum takimata justo et elitr dolores sadipscing, at amet sanctus lorem et ea voluptua."

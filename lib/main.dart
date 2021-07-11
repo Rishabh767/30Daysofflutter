@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       theme: ThemeData(
         primarySwatch: Colors.teal,
         fontFamily: GoogleFonts.poppins().fontFamily,
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: MyRoutes.homeRoute, // this route will always launch first
+      initialRoute: MyRoutes.loginRoute, // this route will always launch first
       routes: {
         "/": (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
