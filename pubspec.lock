@@ -65,7 +65,7 @@ packages:
     source: hosted
     version: "3.0.1"
   cupertino_icons:
-    dependency: "direct main"
+    dependency: "direct overridden"
     description:
       name: cupertino_icons
       url: "https://pub.dartlang.org"
@@ -93,7 +93,7 @@ packages:
     source: hosted
     version: "6.1.2"
   flutter:
-    dependency: "direct main"
+    dependency: "direct overridden"
     description: flutter
     source: sdk
     version: "0.0.0"
@@ -103,7 +103,7 @@ packages:
     source: sdk
     version: "0.0.0"
   google_fonts:
-    dependency: "direct main"
+    dependency: "direct overridden"
     description:
       name: google_fonts
       url: "https://pub.dartlang.org"
@@ -206,7 +206,7 @@ packages:
       name: plugin_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.0"
+    version: "2.0.1"
   process:
     dependency: transitive
     description:
@@ -283,7 +283,7 @@ packages:
     source: hosted
     version: "2.1.0"
   velocity_x:
-    dependency: "direct main"
+    dependency: "direct overridden"
     description:
       name: velocity_x
       url: "https://pub.dartlang.org"
@@ -302,7 +302,7 @@ packages:
       name: win32
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.2.4"
+    version: "2.2.5"
   xdg_directories:
     dependency: transitive
     description:
