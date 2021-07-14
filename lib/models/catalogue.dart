@@ -12,11 +12,13 @@ class CatalogModel {
         image:
             "https://cdn.shopify.com/s/files/1/0281/2805/1260/products/IP6SG_6c88e105-6510-41c8-b8d8-3bb93dab4f13_1024x1024.jpg?v=1574499560")
   ];
+
+  get get => null;
   //get item by id
-  static Item getById(int id) =>
+  Item getById(int id) =>
       items.firstWhere((element) => element.id == id, orElse: null);
   //get item by position
-  static Item getByPosition(int pos) => items[pos];
+  Item getByPosition(int pos) => items[pos];
 }
 
 class Item {
