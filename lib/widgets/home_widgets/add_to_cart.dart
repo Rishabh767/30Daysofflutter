@@ -12,23 +12,15 @@ import 'package:flutter_application_1/pages/home_detail_page.dart';
 import 'package:flutter_application_1/widgets/home_widgets/catalog_image.dart';
 import 'package:flutter_application_1/widgets/themes.dart';
 
-class AddToCart extends StatefulWidget {
+class AddToCart extends StatelessWidget {
   final Item catalog;
-  const AddToCart({
-    Key? key,
-    required this.catalog,
-  }) : super(key: key);
 
-  @override
-  __AddToCartState createState() => __AddToCartState();
-}
-
-class __AddToCartState extends State<AddToCart> {
   final _cart = CartModel();
+  AddToCart({Key? key, required this.catalog}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     bool isInCart;
-    if (_cart.items.contains(widget.catalog)) {
+    if (_cart.items.contains(catalog)) {
       isInCart = true;
     } else {
       isInCart = false;
@@ -40,8 +32,8 @@ class __AddToCartState extends State<AddToCart> {
           final _catalog = CatalogModel();
 
           _cart.catalog = _catalog;
-          _cart.add(widget.catalog);
-          setState(() {});
+          _cart.add(catalog);
+          // setState(() {});
         }
       },
       style: ButtonStyle(
