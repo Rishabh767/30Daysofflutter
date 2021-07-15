@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -25,7 +27,12 @@ class __AddToCartState extends State<AddToCart> {
   final _cart = CartModel();
   @override
   Widget build(BuildContext context) {
-    bool isInCart = _cart.items.contains(widget.catalog) ?? false;
+    bool isInCart;
+    if (_cart.items.contains(widget.catalog)) {
+      isInCart = true;
+    } else {
+      isInCart = false;
+    }
     return ElevatedButton(
       onPressed: () {
         if (!isInCart) {
