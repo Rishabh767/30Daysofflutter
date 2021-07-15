@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
 class CatalogModel {
+  static final catModel = CatalogModel._internal();
+
+  CatalogModel._internal();
+
+  factory CatalogModel() => catModel;
+  //made singleton
+
   static List<Item> items = [
     Item(
         id: 1,
