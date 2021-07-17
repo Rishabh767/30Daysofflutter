@@ -13,7 +13,8 @@ import 'package:flutter_application_1/pages/home_detail_page.dart';
 import 'package:flutter_application_1/widgets/home_widgets/catalog_image.dart';
 import 'package:flutter_application_1/widgets/themes.dart';
 
-class MyStore extends VxState {
+// ignore: must_be_immutable
+class MyStore extends VxStore {
   late CatalogModel catalog;
   late CartModel cart;
 
