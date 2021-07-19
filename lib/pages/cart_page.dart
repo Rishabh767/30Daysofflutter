@@ -41,7 +41,7 @@ class CardTotal extends StatelessWidget {
             VxConsumer(
               notifications: {},
               mutations: {AddMutation, RemoveMutation},
-              builder: (context, store, _) {
+              builder: (context, _) {
                 return "\$${_cart.totalPrice}"
                     .text
                     .xl5
@@ -57,8 +57,8 @@ class CardTotal extends StatelessWidget {
                       ));
                     },
                     style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
-                            context.theme.buttonColor)),
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.teal)),
                     child: "Buy".text.white.make())
                 .w32(context)
           ],
@@ -69,10 +69,10 @@ class CardTotal extends StatelessWidget {
 class CartList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    VxState.watch(context, on: [RemoveMutation]);
+    VxState.listen(context, to: [RemoveMutation]);
     final CartModel _cart = (VxState.store as MyStore).cart;
     return _cart.items.isEmpty
-        ? "Show nothing".text.xl3.makeCentered()
+        ? "CART IS EMPTY 😔 ".text.xl3.makeCentered()
         : ListView.builder(
             itemCount: _cart.items.length,
             itemBuilder: (context, index) => ListTile(

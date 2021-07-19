@@ -5,11 +5,16 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class MyTheme {
+  static Color creamColor = Color(0xfff5f5f5);
+  static Color darkcreamColor = Vx.gray900;
+  static Color darkBluish = Color(0xff403b58);
+  static Color lightBluishColor = Vx.indigo500;
+  static Color greenish = Vx.teal900;
   static ThemeData lightTheme(BuildContext context) => ThemeData(
       primarySwatch: Colors.teal,
       cardColor: Colors.tealAccent,
       canvasColor: creamColor,
-      buttonColor: greenish,
+      buttonColor: Vx.teal900,
       accentColor: darkBluish,
       fontFamily: GoogleFonts.poppins().fontFamily,
       appBarTheme: AppBarTheme(
@@ -35,9 +40,4 @@ class MyTheme {
       ));
   //colors
 
-  static Color creamColor = Color(0xfff5f5f5);
-  static Color darkcreamColor = Vx.gray900;
-  static Color darkBluish = Color(0xff403b58);
-  static Color lightBluishColor = Vx.indigo500;
-  static Color greenish = Vx.teal900;
 }

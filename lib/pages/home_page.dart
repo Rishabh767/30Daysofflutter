@@ -47,9 +47,9 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       floatingActionButton: VxBuilder(
         mutations: {AddMutation, RemoveMutation},
-        builder: (context, store, _) => FloatingActionButton(
+        builder: (context, _) => FloatingActionButton(
           onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
-          backgroundColor: context.theme.buttonColor,
+          backgroundColor: Colors.teal,
           child: Icon(CupertinoIcons.cart, color: Colors.white),
         ).badge(
             color: Vx.gray200,
@@ -69,11 +69,10 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CatalogueHeader(),
-              // ignore: unnecessary_null_comparison
-              if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
-                CatalogList().py16().expand()
+              if (CatalogModel.items.isEmpty)
+                CircularProgressIndicator().centered().expand()
               else
-                CircularProgressIndicator().centered().expand(),
+                CatalogList().py16().expand()
             ],
           ),
         ),

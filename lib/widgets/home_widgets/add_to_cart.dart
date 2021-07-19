@@ -20,7 +20,7 @@ class AddToCart extends StatelessWidget {
   AddToCart({Key? key, required this.catalog}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    VxState.watch(context, on: [AddMutation, RemoveMutation]);
+    VxState.listen(context, to: [AddMutation, RemoveMutation]);
     final CartModel _cart = (VxState.store as MyStore).cart;
     bool isInCart;
     if (_cart.items.contains(catalog)) {
@@ -36,12 +36,11 @@ class AddToCart extends StatelessWidget {
         }
       },
       style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
+          backgroundColor: MaterialStateProperty.all(Colors.teal),
           shape: MaterialStateProperty.all(
             StadiumBorder(),
           )),
-      child:
-          isInCart ? Icon(Icons.done) : Icon(CupertinoIcons.cart_badge_minus),
+      child: isInCart ? Icon(Icons.done) : Icon(CupertinoIcons.cart_badge_plus),
     );
   }
 }
