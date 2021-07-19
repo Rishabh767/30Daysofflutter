@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/models/catalogue.dart';
 import 'package:flutter_application_1/widgets/home_widgets/add_to_cart.dart';
@@ -49,11 +51,13 @@ class HomeDetailPage extends StatelessWidget {
                         .color(context.accentColor)
                         .bold
                         .make(),
-                    catalog.desc.text.xl.textStyle(context.captionStyle).make(),
+                    catalog.desc.text.xl
+                        .textStyle(TextStyle(color: Colors.grey))
+                        .make(),
                     10.heightBox,
-                    "Sadipscing dolore clita rebum diam labore voluptua, invidunt takimata dolore elitr voluptua eos, diam lorem dolor voluptua stet rebum sed consetetur consetetur, sed elitr eirmod consetetur clita dolor eirmod. Takimata duo dolore et ipsum. Tempor sanctus rebum takimata justo et elitr dolores sadipscing, at amet sanctus lorem et ea voluptua."
+                    "Sadipscing dolore clita rebum diam labore voluptua"
                         .text
-                        .textStyle(context.captionStyle)
+                        .textStyle(TextStyle(color: Colors.grey))
                         .make()
                         .p16(),
                   ],

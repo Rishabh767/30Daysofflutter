@@ -1,13 +1,18 @@
+// ignore: unused_import
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_application_1/widgets/home_widgets/add_to_cart.dart';
 import 'package:velocity_x/velocity_x.dart';
 
+// ignore: unused_import
 import 'package:flutter_application_1/models/cart.dart';
 import 'package:flutter_application_1/models/catalogue.dart';
 import 'package:flutter_application_1/pages/home_detail_page.dart';
 import 'package:flutter_application_1/widgets/home_widgets/catalog_image.dart';
+// ignore: unused_import
 import 'package:flutter_application_1/widgets/themes.dart';
 
 class CatalogList extends StatelessWidget {
@@ -49,7 +54,7 @@ class CatalogItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           catalog.name.text.lg.color(context.accentColor).bold.make(),
-          catalog.desc.text.textStyle(context.captionStyle).make(),
+          catalog.desc.text.textStyle(TextStyle(color: Colors.grey)).make(),
           10.heightBox,
           ButtonBar(
             alignment: MainAxisAlignment.spaceBetween,

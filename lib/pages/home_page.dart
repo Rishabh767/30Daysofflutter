@@ -47,12 +47,12 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       floatingActionButton: VxBuilder(
         mutations: {AddMutation, RemoveMutation},
-        builder: (context, _) => FloatingActionButton(
+        builder: (context, store, _) => FloatingActionButton(
           onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
           backgroundColor: context.theme.buttonColor,
           child: Icon(CupertinoIcons.cart, color: Colors.white),
         ).badge(
-            color: Vx.red500,
+            color: Vx.gray200,
             size: 20,
             count: _cart.items.length,
             textStyle: TextStyle(
